@@ -10,7 +10,7 @@
 Удачи)
 */
 
-const rnd = Math.ceil(Math.random() * 20);
+let rnd = Math.ceil(Math.random() * 20);
 console.log(rnd);
 
 let score = 20;
