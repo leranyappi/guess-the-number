@@ -1,15 +1,5 @@
 "use strict";
 
-///////////////////////////////////////
-
-/* 
-ЗАДАЧА: 
-Создайте игру в угадай число.
-
-
-Удачи)
-*/
-
 let rnd = Math.ceil(Math.random() * 20);
 console.log(rnd);
 
@@ -32,7 +22,6 @@ document.querySelector(".check").addEventListener("click", function () {
     displayMessage("Победа!");
     document.querySelector("body").style.background = "green";
     document.querySelector(".number").textContent = guess;
-    document.querySelector(".highscore").textContent = score;
     if (score > highScore) {
       highScore = score;
       document.querySelector(".highscore").textContent = highScore;
@@ -58,9 +47,8 @@ document.querySelector(".check").addEventListener("click", function () {
 
 document.querySelector(".again").addEventListener("click", function () {
   document.querySelector("body").style.background =
-    "background: radial-gradient( circle, rgba(35, 34, 41, 1) 51%, rgba(56, 59, 60, 1) 100% )";
+    "radial-gradient( circle, rgba(35, 34, 41, 1) 51%, rgba(56, 59, 60, 1) 100% )";
   score = 20;
-
   rnd = Math.ceil(Math.random() * 20);
   displayMessage("Начните угадывать");
   document.querySelector(".score").textContent = score;
