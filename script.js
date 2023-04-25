@@ -14,7 +14,7 @@ document.querySelector(".check").addEventListener("click", function () {
   const guess = Number(document.querySelector(".guess").value);
   console.log(guess);
   //когда не ввели число
-  if (!guess || guess > 20) {
+  if (!guess || guess > 20 || guess < 1) {
     displayMessage("Ошибка! Введите число от 1 до 20.");
   }
   //когда угадали
